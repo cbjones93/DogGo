@@ -4,37 +4,32 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+
 
 <div>
-    <h4>Walker</h4>
+    <h4>Walker Profile</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NeighborhoodId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NeighborhoodId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImageUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            <img class="bg-info" src="@Model.ImageUrl" alt="avatar" />
-        </dd>
-    </dl>
+    <div class="row">
+            <div>
+                <img class="bg-info" src="@Model.ImageUrl" style="width:100px;float:left;margin-right:20px" />
+            </div>
+        <section class="container">
+            <div class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </div>
+            <div class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </div>
+            <div class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Neighborhood)
+            </div>
+            <div class="col-sm-10">
+                @Html.DisplayFor(model => model.Neighborhood.Name)
+            </div>
+
+
+        </section>
+    </div>
 </div>
 <div>
     @Html.ActionLink("Edit", "Edit", new { /* id = */ }) |
